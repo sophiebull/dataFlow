@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-sankey.min.js"></script>
+</head>
+<body>
+<div id="container", style="width: 800px; height: 600px;"></div> 
+<script>
+anychart.onDocumentReady(function(){
+ //creating the data
+ var data = [
+ {from: "OCS", to: "Form A", weight: 1},
+ {from: "OCS", to: "Form B", weight: 1},
+ {from: "OCS", to: "Form C", weight: 1},
+ {from: "OCS", to: "Form D", weight: 1},
+ {from: "CSP", to: "Form E", weight: 1},
+ {from: "CSP", to: "Form F", weight: 1},
+ {from: "CSP", to: "Form G", weight: 1},
+ {from: "CSP", to: "Form H", weight: 1},
+ {from: "Form A", to: "Y:// DRIVE | OCS", weight: 1},
+ {from: "Form B", to: "Manual Extract (CSP)", weight: 1},
+ {from: "Form C", to: "Manual Extract (CSP)", weight: 1},
+ {from: "Manual Extract (CSP)", to: "Y:// DRIVE | OCS", weight: 2},
+ {from: "Form D", to: "Database | OCS", weight: 1},
+ {from: "Form E", to: "Y:// DRIVE | CSP", weight: 1},
+ {from: "Form F", to: "Database | CSP", weight: 1},
+ {from: "Form G", to: "Database | CSP", weight: 1},
+ {from: "Form H", to: "Manual Extract (OCS)", weight: 1},
+ {from: "Manual Extract (OCS)", to: "Database | CSP", weight: 1}
+];
+//calling the Sankey function
+var sankey_chart = anychart.sankey(data);
+//customizing the width of the nodes
+sankey_chart.nodeWidth("50%");
+//setting the chart title
+sankey_chart.title("Data Flows: Controlled Substances");
+//customizing the vertical padding of the nodes
+sankey_chart.nodePadding(20);
+//setting the container id
+sankey_chart.container("container");
+//initiating drawing the Sankey diagram
+sankey_chart.draw();
+});
+</script>
+</body>
+</html>
