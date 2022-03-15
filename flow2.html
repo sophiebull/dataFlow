@@ -4,36 +4,117 @@
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-sankey.min.js"></script>
 </head>
 <body>
-<div id="container", style="width: 800px; height: 600px;"></div> 
+<div id="container", style="width: 800px; height: 1500px;"></div> 
 <script>
 anychart.onDocumentReady(function(){
  //creating the data
  var data = [
- {from: "OCS", to: "Form A", weight: 1},
- {from: "OCS", to: "Form B", weight: 1},
- {from: "OCS", to: "Form C", weight: 1},
- {from: "OCS", to: "Form D", weight: 1},
- {from: "CSP", to: "Form E", weight: 1},
- {from: "CSP", to: "Form F", weight: 1},
- {from: "CSP", to: "Form G", weight: 1},
- {from: "CSP", to: "Form H", weight: 1},
- {from: "Form A", to: "Y:// DRIVE | OCS", weight: 1},
- {from: "Form B", to: "Manual Extract (CSP)", weight: 1},
- {from: "Form C", to: "Manual Extract (CSP)", weight: 1},
- {from: "Manual Extract (CSP)", to: "Y:// DRIVE | OCS", weight: 2},
- {from: "Form D", to: "Database | OCS", weight: 1},
- {from: "Form E", to: "Y:// DRIVE | CSP", weight: 1},
- {from: "Form F", to: "Database | CSP", weight: 1},
- {from: "Form G", to: "Database | CSP", weight: 1},
- {from: "Form H", to: "Manual Extract (OCS)", weight: 1},
- {from: "Manual Extract (OCS)", to: "Database | CSP", weight: 1}
+
+ // First node
+ {from: "OCS", to: "Licensed Dealer Inspections (OCS)", weight: 21},
+ {from: "OCS", to: "Pharmacy Inspections (OCS)", weight: 4},
+
+ {from: "CSP", to: "Destruction Activities (CSP)", weight: 4},
+ {from: "CSP", to: "Licensed Dealer Inspections (CSP)", weight: 5},
+ {from: "CSP", to: "Pharmacy Inspections (CSP)", weight: 2},
+
+ {from: "POD", to: "SAP PS Time Tracking", weight: 3},
+
+ // Second node
+ 
+ // CSP
+ {from: "Licensed Dealer Inspections (CSP)", to: "LD Inspection Tracker", weight: 1},
+ {from: "Licensed Dealer Inspections (CSP)", to: "Class A Precursor Inspection Report", weight: 1},
+ {from: "Licensed Dealer Inspections (CSP)", to: "CDS Inspection Report", weight: 1},
+ {from: "Licensed Dealer Inspections (CSP)", to: "Border Center Database", weight: 1},
+ {from: "Licensed Dealer Inspections (CSP)", to: "LD Inspection Tracker", weight: 1},
+
+ {from: "Pharmacy Inspections (CSP)", to: "Community Pharmacy Internal Inspection Report", weight: 1},
+ {from: "Pharmacy Inspections (CSP)", to: "Community Pharmacy Inspection Report", weight: 1},
+
+ {from: "Destruction Activities (CSP)", to: "Destruction Tracker", weight: 1},
+ {from: "Destruction Activities (CSP)", to: "Destruction Application", weight: 1},
+
+ // OCS
+ {from: "Licensed Dealer Inspections (OCS)", to: "Site Risk Profile - LD", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "List of Licensees - CDS", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "List of Licensees - Chemical Precursors", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Loss & Theft Report", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Monthly Activity Report - CDS", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Annual Report - CDS", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Ephedrine Monthly Report", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Import Permit Info", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "License Application and Amendment Requests", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Annual Report - Chemical Precursors", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Export Info (Permit & Transactions)", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "List of Designated Personnel - CDS", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Correspondance File from LD", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Notice of Restrictions for Pharmacist and LD", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Compliance Action (Regulatory Letter)", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "LD Profile for Precursor", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "S.56 Exemption Letter", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "S.56 Exemption Holder Dispensing Tracker", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "LD License Including T&C", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "NDS 7", weight: 1},
+ {from: "Licensed Dealer Inspections (OCS)", to: "Observation Tracker", weight: 1},
+
+ {from: "Pharmacy Inspections (OCS)", to: "Pharmacy Observation Tracker", weight: 1},
+ {from: "Pharmacy Inspections (OCS)", to: "Site Risk Profile - PI", weight: 1},
+ {from: "Pharmacy Inspections (OCS)", to: "List of Pharmacies", weight: 1},
+ {from: "Pharmacy Inspections (OCS)", to: "Loss & Theft Report / Suspicious Transactions - PI", weight: 1},
+
+ // Third node
+ {from: "LD Inspection Tracker", to: "Y:// Drive", weight: 1},
+ {from: "SAP PS Time Tracking", to: "Y:// Drive", weight: 3},
+ {from: "Class A Precursor Inspection Report", to: "Database", weight: 1},
+ {from: "CDS Inspection Report", to: "Database", weight: 1},
+ {from: "Site Risk Profile - LD", to: "Unknown", weight: 1},
+ {from: "List of Licensees - CDS", to: "Database", weight: 1},
+ {from: "List of Licensees - Chemical Precursors", to: "Database", weight: 1},
+ {from: "Loss & Theft Report", to: "Unknown", weight: 1},
+ {from: "Monthly Activity Report - CDS", to: "Unknown", weight: 1},
+ {from: "Annual Report - Chemical Precursors", to: "Unknown", weight: 1},
+ {from: "Export Info (Permit & Transactions)", to: "Y:// Drive", weight: 1},
+ {from: "List of Designated Personnel - CDS", to: "Unknown", weight: 1},
+ {from: "Correspondance File from LD", to: "Unknown", weight: 1},
+ {from: "License Application and Amendment Requests", to: "Y:// Drive", weight: 1},
+ {from: "Annual Report - CDS", to: "Unknown", weight: 1},
+ {from: "Ephedrine Monthly Report", to: "Unknown", weight: 1},
+ {from: "Import Permit Info", to: "Y:// Drive", weight: 1},
+ {from: "Site Risk Profile - PI", to: "Unknown", weight: 1},
+
+ 
+ {from: "Notice of Restrictions for Pharmacist and LD", to: "Web", weight: 1},
+ {from: "Compliance Action (Regulatory Letter)", to: "Unknown", weight: 1},
+ {from: "LD Profile for Precursor", to: "Unknown", weight: 1},
+ {from: "S.56 Exemption Letter", to: "Unknown", weight: 1},
+ {from: "S.56 Exemption Holder Dispensing Tracker", to: "Unknown", weight: 1},
+ {from: "LD License Including T&C", to: "Unknown", weight: 1},
+ {from: "NDS 7", to: "Unknown", weight: 1},
+ {from: "Observation Tracker", to: "Unknown", weight: 1},
+ {from: "Loss & Theft Report / Suspicious Transactions - PI", to: "Unknown", weight: 1},
+ {from: "Pharmacy Observation Tracker", to: "Unknown", weight: 1},
+ {from: "List of Pharmacies", to: "Unknown", weight: 1},
+
+ {from: "Community Pharmacy Internal Inspection Report", to: "Database", weight: 1},
+ {from: "Community Pharmacy Inspection Report", to: "Database", weight: 1},
+ {from: "Destruction Tracker", to: "Y:// Drive", weight: 1},
+ {from: "Destruction Application", to: "Y:// Drive", weight: 1},
+ {from: "Border Center Database", to: "Database", weight: 1},
+
+
+
+
 ];
+
+
+
 //calling the Sankey function
 var sankey_chart = anychart.sankey(data);
 //customizing the width of the nodes
-sankey_chart.nodeWidth("50%");
+sankey_chart.nodeWidth("60%");
 //setting the chart title
-sankey_chart.title("Data Flows: Controlled Substances");
+sankey_chart.title("Data Holdings and Flows: Controlled Substances");
 //customizing the vertical padding of the nodes
 sankey_chart.nodePadding(20);
 //setting the container id
