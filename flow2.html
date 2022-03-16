@@ -1,7 +1,7 @@
 <html>
 <head>
-<script src="https://raw.githubusercontent.com/castels/dataFlow/main/basicChart.js"></script>
-<script src="https://raw.githubusercontent.com/castels/dataFlow/main/flowScript.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-sankey.min.js"></script>
 </head>
 <body>
 <div id="container", style="width: 900px; height: 1700px;"></div> 
@@ -120,11 +120,11 @@ anychart.onDocumentReady(function(){
 //calling the Sankey function
 var sankey_chart = anychart.sankey(data);
 //customizing the width of the nodes
-sankey_chart.nodeWidth("60%");
+sankey_chart.nodeWidth("50%");
 //setting the chart title
 sankey_chart.title("Data Holdings and Flows: Controlled Substances");
 //customizing the vertical padding of the nodes
-sankey_chart.nodePadding(20);
+sankey_chart.nodePadding(30);
 //setting the container id
 sankey_chart.container("container");
 //initiating drawing the Sankey diagram
