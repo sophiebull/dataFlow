@@ -4,7 +4,7 @@
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-sankey.min.js"></script>
 </head>
 <body>
-<div id="container", style="width: 800px; height: 1500px;"></div> 
+<div id="container", style="width: 900px; height: 1700px;"></div> 
 <script>
 anychart.onDocumentReady(function(){
  //creating the data
@@ -14,7 +14,7 @@ anychart.onDocumentReady(function(){
  {from: "OCS", to: "Licensed Dealer Inspections (OCS)", weight: 21},
  {from: "OCS", to: "Pharmacy Inspections (OCS)", weight: 4},
 
- {from: "CSP", to: "Destruction Activities (CSP)", weight: 4},
+ {from: "CSP", to: "Destruction Activities (CSP)", weight: 2},
  {from: "CSP", to: "Licensed Dealer Inspections (CSP)", weight: 5},
  {from: "CSP", to: "Pharmacy Inspections (CSP)", weight: 2},
 
@@ -23,11 +23,9 @@ anychart.onDocumentReady(function(){
  // Second node
  
  // CSP
- {from: "Licensed Dealer Inspections (CSP)", to: "LD Inspection Tracker", weight: 1},
  {from: "Licensed Dealer Inspections (CSP)", to: "Class A Precursor Inspection Report", weight: 1},
  {from: "Licensed Dealer Inspections (CSP)", to: "CDS Inspection Report", weight: 1},
  {from: "Licensed Dealer Inspections (CSP)", to: "Border Center Database", weight: 1},
- {from: "Licensed Dealer Inspections (CSP)", to: "LD Inspection Tracker", weight: 1},
 
  {from: "Pharmacy Inspections (CSP)", to: "Community Pharmacy Internal Inspection Report", weight: 1},
  {from: "Pharmacy Inspections (CSP)", to: "Community Pharmacy Inspection Report", weight: 1},
@@ -58,16 +56,26 @@ anychart.onDocumentReady(function(){
  {from: "Licensed Dealer Inspections (OCS)", to: "NDS 7", weight: 1},
  {from: "Licensed Dealer Inspections (OCS)", to: "Observation Tracker", weight: 1},
 
- {from: "Pharmacy Inspections (OCS)", to: "Pharmacy Observation Tracker", weight: 1},
  {from: "Pharmacy Inspections (OCS)", to: "Site Risk Profile - PI", weight: 1},
  {from: "Pharmacy Inspections (OCS)", to: "List of Pharmacies", weight: 1},
  {from: "Pharmacy Inspections (OCS)", to: "Loss & Theft Report / Suspicious Transactions - PI", weight: 1},
 
+// Intermediate steps
+ {from: "Class A Precursor Inspection Report", to: "Manual Data Entry into Excel (OCS)", weight: 1},
+ {from: "CDS Inspection Report", to: "Manual Data Entry into Excel (OCS)", weight: 1},
+ {from: "Community Pharmacy Internal Inspection Report", to: "Manual Data Entry into Excel (OCS)", weight: 1},
+ {from: "Community Pharmacy Inspection Report", to: "Manual Data Entry into Excel (OCS)", weight: 1},
+
+ {from: "Manual Data Entry into Excel (OCS)", to: "LD Inspection Tracker", weight: 2},
+ {from: "Manual Data Entry into Excel (OCS)", to: "Pharmacy Inspection Tracker", weight: 2},
+
+
+
  // Third node
- {from: "LD Inspection Tracker", to: "Y:// Drive", weight: 1},
+
+ {from: "LD Inspection Tracker", to: "Y:// Drive", weight: 2},
  {from: "SAP PS Time Tracking", to: "Y:// Drive", weight: 3},
  {from: "Class A Precursor Inspection Report", to: "Database", weight: 1},
- {from: "CDS Inspection Report", to: "Database", weight: 1},
  {from: "Site Risk Profile - LD", to: "Unknown", weight: 1},
  {from: "List of Licensees - CDS", to: "Database", weight: 1},
  {from: "List of Licensees - Chemical Precursors", to: "Database", weight: 1},
@@ -93,7 +101,7 @@ anychart.onDocumentReady(function(){
  {from: "NDS 7", to: "Unknown", weight: 1},
  {from: "Observation Tracker", to: "Unknown", weight: 1},
  {from: "Loss & Theft Report / Suspicious Transactions - PI", to: "Unknown", weight: 1},
- {from: "Pharmacy Observation Tracker", to: "Unknown", weight: 1},
+ {from: "Pharmacy Inspection Tracker", to: "Unknown", weight: 2},
  {from: "List of Pharmacies", to: "Unknown", weight: 1},
 
  {from: "Community Pharmacy Internal Inspection Report", to: "Database", weight: 1},
