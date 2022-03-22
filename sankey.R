@@ -33,41 +33,80 @@ pairs <- list(
   
   
     # OCS
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Site Risk Profile - LD", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "List of Licensees - CDS", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "List of Licensees - Chemical Precursors", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Loss & Theft Report", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Monthly Activity Report - CDS", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Annual Report - CDS", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Ephedrine Monthly Report", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Import Permit Info", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "License Application and Amendment Requests", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Annual Report - Chemical Precursors", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Export Info (Permit & Transactions)", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "List of Designated Personnel - CDS", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Correspondance File from LD", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Notice of Restrictions for Pharmacist and LD", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Compliance Action (Regulatory Letter)", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "LD Profile for Precursor", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "S.56 Exemption Letter", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "S.56 Exemption Holder Dispensing Tracker", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "LD License Including T&C", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "NDS 7", weight = 1),
-  c(from = "Licensed Dealer Inspections (OCS)", to = "Observation Tracker", weight = 1),
-  
-  c(from = "Pharmacy Inspections (OCS)", to = "Site Risk Profile - PI", weight = 1),
-  c(from = "Pharmacy Inspections (OCS)", to = "List of Pharmacies", weight = 1),
-  c(from = "Pharmacy Inspections (OCS)", to = "Loss & Theft Report / Suspicious Transactions - PI", weight = 1),
-  
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Site Risk Profile - LD", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "List of Licensees - CDS", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "List of Licensees - Chemical Precursors", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Loss & Theft Report", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Monthly Activity Report - CDS", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Annual Report - CDS", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Ephedrine Monthly Report", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Import Permit Info", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "License Application and Amendment Requests", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Annual Report - Chemical Precursors", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Export Info (Permit & Transactions)", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "List of Designated Personnel - CDS", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Correspondance File from LD", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Notice of Restrictions for Pharmacist and LD", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Compliance Action (Regulatory Letter)", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "LD Profile for Precursor", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "S.56 Exemption Letter", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "S.56 Exemption Holder Dispensing Tracker", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "LD License Including T&C", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "NDS 7", weight = 1),
+    c(from = "Licensed Dealer Inspections (OCS)", to = "Observation Tracker", weight = 1),
+    
+    c(from = "Pharmacy Inspections (OCS)", to = "Site Risk Profile - PI", weight = 1),
+    c(from = "Pharmacy Inspections (OCS)", to = "List of Pharmacies", weight = 1),
+    c(from = "Pharmacy Inspections (OCS)", to = "Loss & Theft Report / Suspicious Transactions - PI", weight = 1),
+    
   # Intermediate steps
-  c(from = "Class A Precursor Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
-  c(from = "CDS Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
-  c(from = "Community Pharmacy Internal Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
-  c(from = "Community Pharmacy Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
   
-  c(from = "Manual Data Entry into Excel (OCS)", to = "LD Inspection Tracker", weight = 2),
-  c(from = "Manual Data Entry into Excel (OCS)", to = "Pharmacy Inspection Tracker", weight = 2)
+    c(from = "Class A Precursor Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
+    c(from = "CDS Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
+    c(from = "Community Pharmacy Internal Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
+    c(from = "Community Pharmacy Inspection Report", to = "Manual Data Entry into Excel (OCS)", weight = 1),
+    
+    c(from = "Manual Data Entry into Excel (OCS)", to = "LD Inspection Tracker", weight = 2),
+    c(from = "Manual Data Entry into Excel (OCS)", to = "Pharmacy Inspection Tracker", weight = 2),
   
+  # Third Node
+  
+    c(from =  "LD Inspection Tracker", to = "Y:// Drive", weight = 2),
+    c(from =  "SAP PS Time Tracking", to = "Y:// Drive", weight = 3),
+    c(from =  "Class A Precursor Inspection Report", to = "Database", weight = 1),
+    c(from =  "Site Risk Profile - LD", to = "Unknown", weight = 1),
+    c(from =  "List of Licensees - CDS", to = "Database", weight = 1),
+    c(from =  "List of Licensees - Chemical Precursors", to = "Database", weight = 1),
+    c(from =  "Loss & Theft Report", to = "Unknown", weight = 1),
+    c(from =  "Monthly Activity Report - CDS", to = "Unknown", weight = 1),
+    c(from =  "Annual Report - Chemical Precursors", to = "Unknown", weight = 1),
+    c(from =  "Export Info (Permit & Transactions)", to = "Y:// Drive", weight = 1),
+    c(from =  "List of Designated Personnel - CDS", to = "Unknown", weight = 1),
+    c(from =  "Correspondance File from LD", to = "Unknown", weight = 1),
+    c(from =  "License Application and Amendment Requests", to = "Y:// Drive", weight = 1),
+    c(from =  "Annual Report - CDS", to = "Unknown", weight = 1),
+    c(from =  "Ephedrine Monthly Report", to = "Unknown", weight = 1),
+    c(from =  "Import Permit Info", to = "Y:// Drive", weight = 1),
+    c(from =  "Site Risk Profile - PI", to = "Unknown", weight = 1),
+    
+    
+    c(from =  "Notice of Restrictions for Pharmacist and LD", to = "Web", weight = 1),
+    c(from =  "Compliance Action (Regulatory Letter)", to = "Unknown", weight = 1),
+    c(from =  "LD Profile for Precursor", to = "Unknown", weight = 1),
+    c(from =  "S.56 Exemption Letter", to = "Unknown", weight = 1),
+    c(from =  "S.56 Exemption Holder Dispensing Tracker", to = "Unknown", weight = 1),
+    c(from =  "LD License Including T&C", to = "Unknown", weight = 1),
+    c(from =  "NDS 7", to = "Unknown", weight = 1),
+    c(from =  "Observation Tracker", to = "Unknown", weight = 1),
+    c(from =  "Loss & Theft Report / Suspicious Transactions - PI", to = "Unknown", weight = 1),
+    c(from =  "Pharmacy Inspection Tracker", to = "Unknown", weight = 2),
+    c(from =  "List of Pharmacies", to = "Unknown", weight = 1),
+    
+    c(from =  "Community Pharmacy Internal Inspection Report", to = "Database", weight = 1),
+    c(from =  "Community Pharmacy Inspection Report", to = "Database", weight = 1),
+    c(from =  "Destruction Tracker", to = "Y:// Drive", weight = 1),
+    c(from =  "Destruction Application", to = "Y:// Drive", weight = 1),
+    c(from =  "Border Center Database", to = "Database", weight = 1)
   
 )
 
@@ -78,7 +117,7 @@ rownames(pairs_df) <- NULL
 
 # Key
 label <- unique(c(pairs_df$from,pairs_df$to))
-index <- 1:length(label)
+index <- 0:(length(label)-1)
     
     key <- data.frame(
       label = label,
@@ -102,7 +141,7 @@ my_data <- list(
   link = list(
     source_data = pairs_df$from_index,
     target_data = pairs_df$to_index,
-    weight = pairs_df$weight,
+    weight = as.numeric(pairs_df$weight),
     label = pairs_df$path_name
     )
 )
